@@ -12,3 +12,7 @@ The bot currently supports the following commands:
 `dot cfa:events`
 `dot cfa:stories`
 `dot cfa:issues`
+
+### Deployment
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/afomi/civic-bot)
