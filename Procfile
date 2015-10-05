@@ -1,1 +1,1 @@
-web: bundle exec ruby bot.rb
+slack: bundle exec ruby bot.rb

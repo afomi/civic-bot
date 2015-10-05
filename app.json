@@ -2,9 +2,10 @@
   "name": "Civic Slackbot",
   "description": "A basic Slack bot calling the CfA API",
   "repository": "https://github.com/afomi/civic-bot",
-  "logo": "https://github.com/afomi/civic-bot/logo.png",
+  "logo": "https://github.com/afomi/civic-bot/images/civic-bot-logo.png",
   "keywords": ["ruby", "civic"],
   "env": {
+     "SLACK_API_TOKEN": "YOUR-SLACK-TOKEN-HERE",
      "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-ruby"
    }
 }
