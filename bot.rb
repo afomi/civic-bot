@@ -2,6 +2,10 @@ require 'slack'
 require_relative 'slack/helper'
 require_relative 'slack/helper_text'
 
+Slack.configure do |config|
+  config.token = ENV['SLACK_API_TOKEN']
+end
+
 class Slack::Go
   def initialize
     client = Slack::RealTime::Client.new
@@ -12,8 +16,6 @@ class Slack::Go
 
     client.on :message do |data|
       case data['text']
-      when 'dot entries' then
-        Slack::Helper.new(client: client, data: data).entries
       when 'dot resources' then
         Slack::Helper.new(client: client, data: data).resources
       when 'dot cfa' then
@@ -29,10 +31,6 @@ class Slack::Go
 
     client.start!
   end
-end
-
-Slack.configure do |config|
-  config.token = ENV['SLACK_API_TOKEN']
 end
 
 Slack::Go.new
