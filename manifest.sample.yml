@@ -1,0 +1,9 @@
+---
+  applications:
+  - name: pws-app-name
+    buildpack: "https://github.com/cloudfoundry/ruby-buildpack"
+    command: "bundle exec ruby bot.rb"
+    no-route: true
+    set-health-check: none
+    env:
+      SLACK_API_TOKEN: YOUR-SLACK-TOKEN-GOES-HERE
